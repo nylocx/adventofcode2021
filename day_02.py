@@ -1,4 +1,5 @@
 #%% Initialize
+import pandas as pd
 
 #%% Read input
 with open("day_02_input.txt") as f:
@@ -32,3 +33,8 @@ for direction, amount in _input:
         aim -= amount
 
 print("Result of depth times horizontal (Part 2):", depth * horizontal)
+
+#%% Part 1 (pandas)
+df = pd.read_csv("day_02_input.txt", sep=" ", header=None)
+d, f, u = df.groupby(0).sum().to_numpy()
+print((d-u)*f)

@@ -25,7 +25,7 @@ def simulate_step(grid):
 
 #%% Part 1
 current_grid = octopus_grid.copy()
-print(sum(simulate_step(current_grid) for i in range(100)))
+print(sum(simulate_step(current_grid) for _ in range(100)))
 
 #%% Part 2
 current_grid = octopus_grid.copy()
